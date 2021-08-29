@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "target": "esnext",
+      "module": "CommonJS",
+      "moduleResolution": "node",
+      "strict": true,
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+      "allowJs": true,
+      "outDir": "dist/main"
+    },
+    "include": [
+      "src/main/**/*.ts",
+      "src/main/preload.js",
+    ]
+  }
+  

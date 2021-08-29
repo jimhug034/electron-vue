@@ -1,0 +1,41 @@
+{
+  "name": "electron-vue",
+  "version": "0.0.0",
+  "main": "dist/main/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview",
+    "electron:dev": "cross-env NODE_ENV=development electron index.js",
+    "electron:build": "rimraf dist && vite build && tsc -p tsconfig.electron.json && electron-builder"
+  },
+  "build": {
+    "appId": "your.id",
+    "mac": {
+      "category": "your.app.category.type"
+    }
+  },
+  "ts-standard": {
+    "project": "./tsconfig.json",
+    "ignore": [
+      "dist",
+      "src/**/*.js"
+    ]
+  },
+  "dependencies": {
+    "vue": "^3.2.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.6.0",
+    "@vue/compiler-sfc": "^3.0.5",
+    "cross-env": "^7.0.3",
+    "electron": "^13.2.3",
+    "electron-builder": "^22.11.7",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.2.1",
+    "ts-standard": "^10.0.0",
+    "typescript": "^4.3.2",
+    "vite": "^2.5.1",
+    "vue-tsc": "^0.2.2"
+  }
+}
